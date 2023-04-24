@@ -5,6 +5,10 @@
 
 /* betty style doc for function main goes there */
 /* man function */
+/**
+ * main - main block
+ * Return: 0
+ */
 int main(void)
 {
 int n;
