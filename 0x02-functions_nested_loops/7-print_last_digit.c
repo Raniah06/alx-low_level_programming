@@ -13,5 +13,5 @@ if (l < 0)
 l = -l;
 }
 return (l);
-_putchar(l + '0');
+_putchar((l * 10) + l + '0');
 }
