@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * int print_last_digit(int n) - prints the last digit of number n
+ * print_last_digit - prints the last digit of number n
  * @n: Number to be tested
  *
  * Return: last digit of n
@@ -12,6 +12,6 @@ if (l < 0)
 {
 l = -l;
 }
+_putchar((l + '0' + l);
 return (l);
-_putchar((l * 10) + l);
 }
