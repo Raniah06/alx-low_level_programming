@@ -1,10 +1,8 @@
 #include "main.h"
-
 /**
- *  int _isalpha(int c) :- in lowercase or upper for int c.
- *
- * Return: Always 1 if lower (Success) else 0
- */
+*  int _isalpha(int c) :- in lowercase or upper for int c.
+* Return: Always 1 if lower (Success) else 0
+*/
 int _isalpha(int c)
 {
 if (c >= 97 && c <= 122)
