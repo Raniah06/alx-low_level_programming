@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *  int _islower(int c) :- in lowercase given the integer c.
+ *  int _islower(int c) - checks if parameter c in lowercase if so return (1) else return (0).
  *
  * Return: Always 0 (Success)
  */
@@ -11,7 +11,7 @@ if (c >= 97 && c <= 122)
 {
 return (1);
 }
-else 
+else
 {
 return (0);
 }
