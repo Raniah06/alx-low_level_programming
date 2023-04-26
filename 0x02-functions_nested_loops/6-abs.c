@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * int _abs(int n) - prints the sign of the given number +/-
+ * * _abs - Computes the absolute value of an integer.
  * @n: Number to be tested
  *
  * Return: - n  if negative and n if positive
