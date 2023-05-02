@@ -3,9 +3,9 @@
 /**
  * _puts - returns the string
  *
- * @s: this is the string
+ * @str: this is the string
  *
- * Return: the string
+ * Return: no return
  */
 void _puts(char *str)
 {
