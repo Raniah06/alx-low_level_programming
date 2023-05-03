@@ -1,7 +1,8 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * print_array - returns the half string
+ * print_array - returns string
  *
  * @a: this is the string
  * @n: array size
@@ -12,15 +13,11 @@
 void print_array(int *a, int n)
 {
 int i;
-for (i = 0; i < n ; i++)
+for (i  = 0; i < n; i++)
 {
-if (i == n - 1)
-{
-_putchar(a[i]);
-_putchar('\n');
-break;
+printf("%d", *(a + i));
+if (i != (n - 1))
+printf(", ");
 }
-_putchar(a[i]) ;
-_putchar(', ');
-}
+printf("\n");
 }
