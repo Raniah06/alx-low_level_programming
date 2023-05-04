@@ -12,13 +12,11 @@ int i;
 
 for (i = 0; str[i] != '\0'; i++)
 {
-if(str[0] > 96 && str[0] < 123)
+while (!( str[i] > 96 && str[i] < 123))
+i++;
+if (i == 0 || str[i - 1] == ' ' || str[i - 1] == '.' || str[i - 1] == '\n' || str[i - 1] == '\t' || str[i - 1] == ';' || str[i - 1] == ',' || str[i - 1] == '?' || str[i - 1] == '!' || str[i - 1] == '(' || str[i - 1] == ')' || str[i - 1] == '{' || str[i - 1] == '}'
 {
-c[0] -= 32;
-}
-else if (str[i] = ' ' && str[i + 1] > 96 && str[i + 1] < 123)
-{
-str[i + 1] -= 32;
+str[i] -= 32;
 }
 }
 return (str);
