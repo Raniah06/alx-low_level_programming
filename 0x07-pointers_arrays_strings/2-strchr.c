@@ -2,6 +2,7 @@
 
 /**
  * _strchr - Find first character
+ * @s : string array
  * @c: character to be finded
  * Return: Pointer to array
  */
