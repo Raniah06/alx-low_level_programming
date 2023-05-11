@@ -1,37 +1,36 @@
 #include "main.h"
+
 /**
- * is_prime_number - determine if a number is a prime number
- * @n: int number
- * Return: 1 if prime, 0 otherwise
- */
+  * is_prime_number - Returns if a number is prime
+  *
+  * @n: The number to be checked
+  *
+  * Return:1 if is Prime number or 0 if no
+  */
 
 int is_prime_number(int n)
 {
-	if (n < 2)
-		return (0);
-	if (n < 4)
-		return (1);
-	return (isPrime(n, 2));
+	return (_prime(n, 1));
 }
+
 /**
- * isPrime - helper function, recursive steps taken
- * @n: number given to original function is_prime_number
- * @i: incrementer divisor
- * Return: 0 if not prime, 1 if prime
- */
+  * _prime - Check if number is prime
+  *
+  * @n: The number to be counted
+  * @i: The iteration count
+  *
+  * Return: 1 for prime or 0 composite
+  */
+int _prime(int n, int i)
+{
+	if (n <= 1)
+		return (0);
 
-int isPrime(int n, int i)
-{
-if(n > 1)
-{
-if(n % i == 0)
-{
-return 1; 
-}
-isPrime(n, i + 1);
-}
-else
-return 0;
+	if (n % i == 0 && i > 1)
+		return (0);
 
-return -1;
+	if (n %  i != 0 && i > 1)
+		return (1);
+
+	return (_prime(n, i + 1));
 }
