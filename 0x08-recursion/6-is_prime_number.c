@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * is_prime_number - determine if a number is a prime number
  * @n: int number
@@ -21,9 +20,9 @@ int is_prime_number(int n)
  * Return: 0 if not prime, 1 if prime
  */
 
-int isPrime(int i, int n)
+int isPrime(int n, int i)
 {
-int i = 2; 
+i = 2; 
 
 if(n > 1)
 {
@@ -31,7 +30,7 @@ if(n % i == 0)
 {
 return 1; 
 }
-isPrime(i + 1, n);
+isPrime(n, i + 1);
 }
 else
 return 0;
