@@ -14,7 +14,7 @@ int _sqrt_recursion(int n)
 
 /**
  * _sqrt -  function to solve _sqrt_recursion
- * @c: number to determine if square root
+ * @n: number to determine if square root
  * @i: incrementer to compare against `c`
  * Return: square root if natural square root, or -1 if none found
  */
