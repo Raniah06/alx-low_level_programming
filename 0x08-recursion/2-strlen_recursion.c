@@ -11,7 +11,7 @@ int c = 0;
 if (*s != '\0')
 {
 c++;
-_puts_recursion(++s);
+_strlen_recursion(++s);
 }
 return (c);
 }
