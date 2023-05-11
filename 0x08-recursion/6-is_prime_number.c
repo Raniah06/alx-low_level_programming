@@ -22,8 +22,6 @@ int is_prime_number(int n)
 
 int isPrime(int n, int i)
 {
-i = 2; 
-
 if(n > 1)
 {
 if(n % i == 0)
