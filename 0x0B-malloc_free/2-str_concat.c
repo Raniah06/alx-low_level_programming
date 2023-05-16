@@ -1,0 +1,41 @@
+#include "main.h"
+#include <stdlib.h>
+
+/**
+ *str_concat - concatenates two strings using malloc
+ * @s1: first string
+ * @s2: second string
+ * Return: Pointer to the new string
+ */
+
+char *str_concat(char *s1, char *s2)
+{
+	char *a;
+	int i, j, k, m;
+
+	if (s1 == NULL)
+		return (NULL);
+
+        if (s2 == NULL)
+		return (NULL);
+
+	for (i = 0; s1[i] != '\0'; i++)
+		;
+
+	for (j = 0; s2[j] != '\0'; j++)
+		;
+
+	a = malloc((i * sizeof(*s1)) + (j * sizeof(*s2)) + 1);
+	if (a == NULL)
+		return (NULL);
+
+	for (k = 0, m = 0; k < (i + j + 1); k++)
+	{
+		if (k < i)
+			a[k] = s1[k];
+		else
+			a[k] = s2[m++];
+	}
+
+	return (a);
+}
