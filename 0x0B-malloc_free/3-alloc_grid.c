@@ -24,14 +24,14 @@ return (NULL);
 for (i = 0; i < height; i++)
 {
 a[i] = malloc(width * sizeof(**a));
-if (grid[i] == NULL)
+if (a[i] == NULL)
 {
 while (i >= 0)
 {
-free(grid[i]);
+free(a[i]);
 i--;
 }
-free(grid);
+free(a);
 return (NULL);
 }
 for (j = 0; j < width; j++)
