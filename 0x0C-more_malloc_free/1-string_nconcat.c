@@ -12,20 +12,22 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
-	int len1, i, j;
+	int i, j, k;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	len1 = (unsigned int)_strlen(s1);
-	p = malloc((len1 + n + 1) * sizeof(char));
+	for (k = 0; s1[k] != '\0'; k++)
+		;
+
+	p = malloc((k + n + 1) * sizeof(char));
 	if (p == NULL)
 		return (NULL);
-	for (i = 0, j = 0; i < (len1 + n); i++)
+	for (i = 0, j = 0; i < (k + n); i++)
 	{
-		if (i < len1)
+		if (i < k)
 			p[i] = s1[i];
 		else
 			p[i] = s2[j++];
@@ -33,19 +35,4 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	p[i] = '\0';
 
 	return (p);
-}
-
-/**
- * _strlen - find length of string
- * @s: string
- * Return: length of string
- */
-
-int _strlen(char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-		;
-	return (i);
 }
