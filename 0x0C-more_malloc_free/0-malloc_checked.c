@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * malloc_checked - If malloc fails, terminate process with status 98.
- * @b: unsigned
+ * malloc_checked - If malloc fails, terminate process with status 98
+ * @b: unsigned integer
  * Return: void pointer
  */
 
