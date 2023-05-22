@@ -1,12 +1,20 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+
+/**
+ * new_dog - create a new dog
+ * @name: char string name
+ * @age: int age
+ * @owner: char string owner
+ * Return: pointer to new dog
+ */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
 int i, j, k;
+dog_t *new;
 
-dog_t *new = malloc(sizeof(dog_t));
+new = malloc(sizeof(dog_t));
 if (new == NULL)
 {
 return (NULL);
@@ -15,8 +23,8 @@ for (i = 0; name[i] != '\0'; i++)
 ;
 for (j = 0; owner[j] != '\0'; j++)
 ;
-new->name = malloc(sizeof(char) * i + 1);
-new->owner = malloc(sizeof(char) * j + 1);
+new->name = malloc(i * sizeof(new->name));
+new->owner = malloc(j * sizeof(new->owner));
 
 if (new->name == NULL || new->owner == NULL)
 {
