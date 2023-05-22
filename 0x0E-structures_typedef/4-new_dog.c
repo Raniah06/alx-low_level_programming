@@ -9,8 +9,8 @@
   */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i, j, k, n;
-	dog_t *dogy;
+int i, j, k, n;
+dog_t *dogy;
 
 for (i = 0; name[i] != '\0'; i++)
 ;
