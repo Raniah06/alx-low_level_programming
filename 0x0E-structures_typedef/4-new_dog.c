@@ -34,9 +34,9 @@ free(do);
 return (NULL);
 }
 for (k = 0; k <= i; k++)
-n[k] = name[k];
+do->name[k] = name[k];
 for (k = 0; k <= j; k++)
-o[k] = owner[k];
+do->owner[k] = owner[k];
 
 do->age = age;
 
