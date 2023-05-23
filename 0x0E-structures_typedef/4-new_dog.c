@@ -25,9 +25,9 @@ dogy->name = malloc(i  * sizeof(dogy->name));
 dogy->owner = malloc(j * sizeof(dogy->owner));
 if (dogy->name == NULL || dogy->owner == NULL)
 {
-free(do->name);
-free(do->owner);
-free(do);
+free(dogy->name);
+free(dogy->owner);
+free(dogy);
 return (NULL);
 }
 for (k = 0; k <= i; k++)
