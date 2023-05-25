@@ -13,7 +13,6 @@ if (f != NULL)
 f(name);
 } else
 {
-printf("Error\n");
 exit(1);
 }
 }
