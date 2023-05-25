@@ -16,7 +16,7 @@ va_start(args, n);
 for (i = 0; i < n; i++)
 {
 unsigned int num = va_arg(args, int);
-sum += (num == NULL) ? 0 : num;
+sum += num;
 }
 
 va_end(args);
