@@ -24,11 +24,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-  if (argv[3] == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
 
 	ptr = get_op_func(argv[2]);
 
@@ -40,7 +35,12 @@ int main(int argc, char *argv[])
 
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-
+  
+  if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
 	printf("%d\n", ptr(a, b));
 
 	return (0);
