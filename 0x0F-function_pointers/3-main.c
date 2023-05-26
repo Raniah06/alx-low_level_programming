@@ -4,15 +4,15 @@
 
 /**
  * main - main function
- * @argc: argument count
- * @argv: string of arguments in array
+ * @argc: argument counts
+ * @argv: string of arguments
  * Return: 0
  */
 
 int main(int argc, char *argv[])
 {
 	int a, b;
-	int (*o)(int, int);
+	int (*ptr)(int, int);
 
 	if (argc != 4)
 	{
@@ -24,22 +24,24 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-
-	o = get_op_func(argv[2]);
-	if (o == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
   if (argv[3] == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
+
+	ptr = get_op_func(argv[2]);
+
+	if (ptr == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
-	printf("%d\n", o(a, b));
+	printf("%d\n", ptr(a, b));
 
 	return (0);
 }
