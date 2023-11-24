@@ -10,13 +10,11 @@
 
 unsigned int binary_to_uint(const char *b)
 {
+    unsigned int result = 0;
+    int i = 0;
+    
     if (b == NULL)
         return (0);
-
-    unsigned int result;
-    int i;
-    result = 0;
-    i = 0;
 
     while (b[i] != '\0')
     {
